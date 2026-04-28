@@ -1,3 +1,5 @@
+import streamlit as st
+
 #シフト記号に応じた日給と勤務時間を設定
 shift_master = {
     "H4": {"pay": 5400, "hours": 4.5},
@@ -17,33 +19,31 @@ shift_master = {
 }
 
 transport = 5 #通勤手当1日5円
-total = 0
+
+st.title("給与計算ツール")
 
 #入力（例：W1 W1! H4）日祝に ! をつける
 input_str = st.text_input('（日祝は"!"）シフト：')
 
-#分解＆整形
-shifts = input_str.upper().split()
+if st.button("計算"):
+    #分解＆整形
+    shifts = input_str.upper().split()
+    total = 0
 
-#合計計算
-for s in shifts:
-    is_holiday = "!" in s
-    shift_key = s.replace("!", "")
+    #合計計算
+    for s in shifts:
+        is_holiday = "!" in s
+        key = s.replace("!", "")
 
-    if shift_key in shift_master:
-        base_pay = shift_master[shift_key]["pay"]
-        hours = shift_master[shift_key]["hours"]
+        if key in shift_master:
+            base = shift_master[key]["pay"]
+            hours = shift_master[key]["hours"]
+            bonus = 50 * hours if is_holiday else 0 #日祝手当（時給＋50円×時間）
+            total += base_pay + bonus + transport
+          
+        else:
+            st.write(f"{s}は未定義のシフトです") #定義されてないシフト記号を警告
 
-        #日祝手当（時給＋50円×時間）
-        bonus = 0
-        if is_holiday:
-            bonus = 50 * hours
-
-        total += base_pay + bonus + transport
-
-    else:
-        print(f"{s}は未定義のシフトです") #定義されてないシフト記号を警告
-
-#出力
-total = int(total)
-print(f"今月の予測給与は {total} 円です")
+    #出力
+    st.write(f"合計：{int(total)}円")
+    
