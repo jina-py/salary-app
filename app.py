@@ -39,7 +39,7 @@ if st.button("計算"):
             base = shift_master[key]["pay"]
             hours = shift_master[key]["hours"]
             bonus = 50 * hours if is_holiday else 0 #日祝手当（時給＋50円×時間）
-            total += base_pay + bonus + transport
+            total += base + bonus + transport
           
         else:
             st.write(f"{s}は未定義のシフトです") #定義されてないシフト記号を警告
