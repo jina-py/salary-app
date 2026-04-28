@@ -20,7 +20,7 @@ transport = 5 #通勤手当1日5円
 total = 0
 
 #入力（例：W1 W1! H4）日祝に ! をつける
-input_str = input('（日祝は"!"）シフト：')
+input_str = st.text_input('（日祝は"!"）シフト：')
 
 #分解＆整形
 shifts = input_str.upper().split()
