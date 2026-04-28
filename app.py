@@ -23,7 +23,7 @@ transport = 5 #通勤手当1日5円
 st.title("給与計算ツール")
 
 #入力（例：W1 W1! H4）日祝に ! をつける
-input_str = st.text_input('（日祝は"!"）シフト：')
+input_str = st.text_input("シフト：")
 
 if st.button("計算"):
     #分解＆整形
