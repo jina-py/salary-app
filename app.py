@@ -31,6 +31,7 @@ if st.button("計算"):
     #分解＆整形
     shifts = input_str.upper().split()
     total = 0
+    totalhours = 0
 
     #合計計算
     for s in shifts:
