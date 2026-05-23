@@ -18,7 +18,7 @@ shift_master = {
     "Y1": {"pay": 5000, "hours": 4},
 }
 
-transport = 5 #通勤手当1日5円
+transport = 66 #1日あたり通勤手当
 
 st.title("給与計算ツール")
 
@@ -38,7 +38,7 @@ if st.button("計算"):
         if key in shift_master:
             base = shift_master[key]["pay"]
             hours = shift_master[key]["hours"]
-            bonus = 50 * hours if is_holiday else 0 #日祝手当（時給＋50円×時間）
+            bonus = 54 * hours if is_holiday else 0 #日祝手当（時給＋50円×時間）
             total += base + bonus + transport
           
         else:
