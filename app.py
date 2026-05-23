@@ -42,10 +42,12 @@ if st.button("計算"):
             hours = shift_master[key]["hours"]
             bonus = 54 * hours if is_holiday else 0 #日祝手当（時給＋50円×時間）
             total += base + bonus + transport
+            totalhours += hours
           
         else:
             st.write(f"{s}は未定義のシフトです") #定義されてないシフト記号を警告
 
     #出力
     st.write(f"合計：{int(total)}円")
+    st.write(f"勤務時間：{int(totalhours)}時間")
     
