@@ -6,7 +6,9 @@ shift_master = {
     "H5": {"pay": 6000, "hours": 5, "hours1": 5, "hours2": 0},
     "HJ": {"pay": 8750, "hours": 7.25, "hours1": 6.25, "hours2": 1},
     "PB": {"pay": 7600, "hours": 6.25, "hours1": 4.25, "hours2": 2},
+    "S1": {"pay": 4800, "hours": 4, "hours1": 4, "hours2": 0}, ##
     "S4": {"pay": 5450, "hours": 4.5, "hours1": 3.5, "hours2": 1},
+    "V1": {"pay": 4850, "hours": 4, "hours1": 3, "hours2": 1}, ##
     "V8": {"pay": 6725, "hours": 5.5, "hours1": 3, "hours2": 2.5},
     "56": {"pay": 7662, "hours": 6.25, "hours1": 3, "hours2": 3.25},
     "W1": {"pay": 4900, "hours": 4, "hours1": 2, "hours2": 2},
@@ -16,6 +18,7 @@ shift_master = {
     "X4": {"pay": 5575, "hours": 4.5, "hours1": 1, "hours2": 3.5},
     "X5": {"pay": 6200, "hours": 5, "hours1": 1, "hours2": 4},
     "Y1": {"pay": 5000, "hours": 4, "hours1": 0, "hours2": 4},
+    "AQ": {"pay": 5000, "hours": 4, "hours1": 0, "hours2": 4}, ##
 }
 
 transport = 66 #1日あたり通勤手当
