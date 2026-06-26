@@ -2,12 +2,14 @@ import streamlit as st
 
 #シフト記号に応じた日給と勤務時間を設定
 shift_master = {
+    "F5": {"pay": 6000, "hours": 5, "hours1": 5, "hours2": 0},
     "H4": {"pay": 5400, "hours": 4.5, "hours1": 4.5, "hours2": 0},
     "H5": {"pay": 6000, "hours": 5, "hours1": 5, "hours2": 0},
     "HJ": {"pay": 8750, "hours": 7.25, "hours1": 6.25, "hours2": 1},
     "PB": {"pay": 7600, "hours": 6.25, "hours1": 4.25, "hours2": 2},
     "S1": {"pay": 4800, "hours": 4, "hours1": 4, "hours2": 0}, ##
     "S4": {"pay": 5450, "hours": 4.5, "hours1": 3.5, "hours2": 1},
+    "52": {"pay": 7612, "hours": 6.25, "hours1": 4, "hours2": 2.25},###
     "V1": {"pay": 4850, "hours": 4, "hours1": 3, "hours2": 1}, ##
     "V8": {"pay": 6725, "hours": 5.5, "hours1": 3, "hours2": 2.5},
     "56": {"pay": 7662, "hours": 6.25, "hours1": 3, "hours2": 3.25},
